@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <param name = "frequency" value ="10" />
+    <include file="$(find assignment_2_2022)/launch/assignment1.launch" />
+    <node pkg="assignment2_research_track_1" type="Node_A_1.py" name="Node_A_1" launch-prefix="konsole -e" />
+    <node pkg="assignment2_research_track_1" type="Node_A_2.py" name="Node_A_2" launch-prefix="konsole -e" />
+    <node pkg="assignment2_research_track_1" type="Node_B.py" name="Node_B" launch-prefix="konsole -e" />
+    <node pkg="assignment2_research_track_1" type="Node_C.py" name="Node_C" launch-prefix="konsole -e" /> 
+</launch>
+
