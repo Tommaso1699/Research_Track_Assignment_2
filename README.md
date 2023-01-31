@@ -44,7 +44,7 @@
 Initialize Node A_1
 Initialize client
 Open main menu
-Choose number from 1 to 3
+Choose number from 1 to 2
 If choice is equal to 1:
   Enter position of x coordinate
   Enter position of y coordinate
