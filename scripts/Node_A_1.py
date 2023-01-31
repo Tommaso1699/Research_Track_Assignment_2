@@ -44,15 +44,6 @@ def switch(choice): #choosing between sending coordinates to robot, cancel movem
             Cancel()
         else:
             print("Wrong input!")
-    elif (choice == "3"): #if user picks number 3
-         print("Are you sure you want to procede? Type y to continue or b to go back to main menu:\n")
-         ch = input()
-         if ch =="b": #going back to main menu
-            UI()
-         elif ch=="y": #exiting process
-            exit()
-         else:
-            print("Wrong input!")
     else:
         print("Wrong input!")
 
@@ -68,7 +59,6 @@ def UI(): #main menu
     print("\nMenu: \n")
     print("Select destination: press 1\n")
     print("Cancel movement: press 2\n")
-    print("Exit process: press 3\n") 
     choice = input()
     signal.signal(signal.SIGINT, handler)
     switch(choice)
