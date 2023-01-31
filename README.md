@@ -29,11 +29,22 @@
  sudo apt-get update
  sudo apt-get install konsole
  ```
+ We need to open terminal and run:
+ ```
+ roscore&
+ ```
+ 
  In our workspace with ROS, we need to run:
  ```
  catkin_make
  source [ws_path]/devel/setup.bash
  ```
+ If necessary, we need to make python files in scripts folder executable. To do that,
+ we move to directory scripts in directory Research_Track_Assignment_2 and we run:
+  ```
+ chmod 777 ./*
+ ```
+ 
  Then in src file we can launch project:
  ```
  roslaunch assignment2_research_track_1 assignment2.launch
