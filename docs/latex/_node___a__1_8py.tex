@@ -1,0 +1,138 @@
+\hypertarget{_node___a__1_8py}{}\doxysection{scripts/\+Node\+\_\+\+A\+\_\+1.py File Reference}
+\label{_node___a__1_8py}\index{scripts/Node\_A\_1.py@{scripts/Node\_A\_1.py}}
+
+
+This file contains code that implements an action client, allowing the user to set a target (x, y) or to cancel it. In interface we can set the desired position of robot, cancel movement or exit process. We navigate via pressing numbers (for example by pressing button \textquotesingle{}1\textquotesingle{} we navigate to section where we need to insert desired position on x and y axis). After inserting, we can confirm our choice or go back to main menu.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{_node___a__1_8py_a68a8404e00b0f5728404443dd22899c1}{Node\+\_\+\+A\+\_\+1.\+Position}} (c, d)
+\begin{DoxyCompactList}\small\item\em This function sends coordinates to robot. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{_node___a__1_8py_a79889ed755bc1a915e379007c6898618}{Node\+\_\+\+A\+\_\+1.\+coordinates}} ()
+\begin{DoxyCompactList}\small\item\em This function takes desired coordinates from user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{_node___a__1_8py_afab59d64a17f619f2cff4c3df4f69b75}{Node\+\_\+\+A\+\_\+1.\+switch}} (choice)
+\begin{DoxyCompactList}\small\item\em This function allows to choose between sending coordinates to robot, cancel movement of robot or exiting process. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{_node___a__1_8py_a90d5c31a0749dc443848d0bab39936da}{Node\+\_\+\+A\+\_\+1.\+Cancel}} ()
+\begin{DoxyCompactList}\small\item\em This function cancels movement of robot. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___a__1_8py_a8acddf6a9de07a073f9d6ec34f175151}\label{_node___a__1_8py_a8acddf6a9de07a073f9d6ec34f175151}} 
+def \mbox{\hyperlink{_node___a__1_8py_a8acddf6a9de07a073f9d6ec34f175151}{Node\+\_\+\+A\+\_\+1.\+handler}} (signum, frame)
+\begin{DoxyCompactList}\small\item\em This function is a signal handler. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{_node___a__1_8py_a591a7e411675fe2379bd88917c3aaa50}{Node\+\_\+\+A\+\_\+1.\+UI}} ()
+\begin{DoxyCompactList}\small\item\em This function is showing a main menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_node___a__1_8py_a0ad9d3e50e7e7051505b684194d45816}\label{_node___a__1_8py_a0ad9d3e50e7e7051505b684194d45816}} 
+\mbox{\hyperlink{_node___a__1_8py_a0ad9d3e50e7e7051505b684194d45816}{Node\+\_\+\+A\+\_\+1.\+goal}} = Pose\+Stamped()
+\begin{DoxyCompactList}\small\item\em goal is type Pose\+Stamped and takes coordinates from c and d parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___a__1_8py_aab45397a1bcceac0eb6a2b7e9f530b28}\label{_node___a__1_8py_aab45397a1bcceac0eb6a2b7e9f530b28}} 
+{\bfseries Node\+\_\+\+A\+\_\+1.\+x}
+\item 
+\mbox{\Hypertarget{_node___a__1_8py_a3c5e6b8d62845b33a3c3928f97ff3ac6}\label{_node___a__1_8py_a3c5e6b8d62845b33a3c3928f97ff3ac6}} 
+{\bfseries Node\+\_\+\+A\+\_\+1.\+y}
+\item 
+\mbox{\Hypertarget{_node___a__1_8py_a1774f30ada3da3bbd249fc327e42a67e}\label{_node___a__1_8py_a1774f30ada3da3bbd249fc327e42a67e}} 
+\mbox{\hyperlink{_node___a__1_8py_a1774f30ada3da3bbd249fc327e42a67e}{Node\+\_\+\+A\+\_\+1.\+a}} = int(input())
+\begin{DoxyCompactList}\small\item\em a is taking from user desired position on x axis \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___a__1_8py_a6cdddc449c3ac6718203f6e24627a4f6}\label{_node___a__1_8py_a6cdddc449c3ac6718203f6e24627a4f6}} 
+\mbox{\hyperlink{_node___a__1_8py_a6cdddc449c3ac6718203f6e24627a4f6}{Node\+\_\+\+A\+\_\+1.\+b}} = int(input())
+\begin{DoxyCompactList}\small\item\em b is taking from user desired position on y axis \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___a__1_8py_a2fbc809de43e92afd6f4eaf4327352e5}\label{_node___a__1_8py_a2fbc809de43e92afd6f4eaf4327352e5}} 
+\mbox{\hyperlink{_node___a__1_8py_a2fbc809de43e92afd6f4eaf4327352e5}{Node\+\_\+\+A\+\_\+1.\+ch}} = input()
+\begin{DoxyCompactList}\small\item\em ch is taking desired operation from user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___a__1_8py_a3e6c948e65119567c3bae542364fbc1c}\label{_node___a__1_8py_a3e6c948e65119567c3bae542364fbc1c}} 
+\mbox{\hyperlink{_node___a__1_8py_a3e6c948e65119567c3bae542364fbc1c}{Node\+\_\+\+A\+\_\+1.\+choice}} = input()
+\begin{DoxyCompactList}\small\item\em choice is taking desired operation from user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___a__1_8py_a55113cd99fa70517c4423daacc75f538}\label{_node___a__1_8py_a55113cd99fa70517c4423daacc75f538}} 
+\mbox{\hyperlink{_node___a__1_8py_a55113cd99fa70517c4423daacc75f538}{Node\+\_\+\+A\+\_\+1.\+client}} = actionlib.\+Simple\+Action\+Client(\textquotesingle{}/reaching\+\_\+goal\textquotesingle{},assignment\+\_\+2\+\_\+2022.\+msg.\+Planning\+Action )
+\begin{DoxyCompactList}\small\item\em client implements action client \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains code that implements an action client, allowing the user to set a target (x, y) or to cancel it. In interface we can set the desired position of robot, cancel movement or exit process. We navigate via pressing numbers (for example by pressing button \textquotesingle{}1\textquotesingle{} we navigate to section where we need to insert desired position on x and y axis). After inserting, we can confirm our choice or go back to main menu. 
+
+\begin{DoxyAuthor}{Author}
+Tomasz Strzesak 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_node___a__1_8py_a90d5c31a0749dc443848d0bab39936da}\label{_node___a__1_8py_a90d5c31a0749dc443848d0bab39936da}} 
+\index{Node\_A\_1.py@{Node\_A\_1.py}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!Node\_A\_1.py@{Node\_A\_1.py}}
+\doxysubsubsection{\texorpdfstring{Cancel()}{Cancel()}}
+{\footnotesize\ttfamily def Node\+\_\+\+A\+\_\+1.\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function cancels movement of robot. 
+
+\begin{DoxyReturn}{Returns}
+Function is type void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_node___a__1_8py_a79889ed755bc1a915e379007c6898618}\label{_node___a__1_8py_a79889ed755bc1a915e379007c6898618}} 
+\index{Node\_A\_1.py@{Node\_A\_1.py}!coordinates@{coordinates}}
+\index{coordinates@{coordinates}!Node\_A\_1.py@{Node\_A\_1.py}}
+\doxysubsubsection{\texorpdfstring{coordinates()}{coordinates()}}
+{\footnotesize\ttfamily def Node\+\_\+\+A\+\_\+1.\+coordinates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function takes desired coordinates from user. 
+
+\begin{DoxyReturn}{Returns}
+Function returns variables a and b 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_node___a__1_8py_a68a8404e00b0f5728404443dd22899c1}\label{_node___a__1_8py_a68a8404e00b0f5728404443dd22899c1}} 
+\index{Node\_A\_1.py@{Node\_A\_1.py}!Position@{Position}}
+\index{Position@{Position}!Node\_A\_1.py@{Node\_A\_1.py}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}}
+{\footnotesize\ttfamily def Node\+\_\+\+A\+\_\+1.\+Position (\begin{DoxyParamCaption}\item[{}]{c,  }\item[{}]{d }\end{DoxyParamCaption})}
+
+
+
+This function sends coordinates to robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is coordinate on x axis \\
+\hline
+{\em d} & is coordinate on y axis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function is type void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_node___a__1_8py_afab59d64a17f619f2cff4c3df4f69b75}\label{_node___a__1_8py_afab59d64a17f619f2cff4c3df4f69b75}} 
+\index{Node\_A\_1.py@{Node\_A\_1.py}!switch@{switch}}
+\index{switch@{switch}!Node\_A\_1.py@{Node\_A\_1.py}}
+\doxysubsubsection{\texorpdfstring{switch()}{switch()}}
+{\footnotesize\ttfamily def Node\+\_\+\+A\+\_\+1.\+switch (\begin{DoxyParamCaption}\item[{}]{choice }\end{DoxyParamCaption})}
+
+
+
+This function allows to choose between sending coordinates to robot, cancel movement of robot or exiting process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & is taking from user number equivalent to desired operation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function is type void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_node___a__1_8py_a591a7e411675fe2379bd88917c3aaa50}\label{_node___a__1_8py_a591a7e411675fe2379bd88917c3aaa50}} 
+\index{Node\_A\_1.py@{Node\_A\_1.py}!UI@{UI}}
+\index{UI@{UI}!Node\_A\_1.py@{Node\_A\_1.py}}
+\doxysubsubsection{\texorpdfstring{UI()}{UI()}}
+{\footnotesize\ttfamily def Node\+\_\+\+A\+\_\+1.\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is showing a main menu. 
+
+\begin{DoxyReturn}{Returns}
+This function is type void 
+\end{DoxyReturn}

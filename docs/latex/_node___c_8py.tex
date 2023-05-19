@@ -1,0 +1,61 @@
+\hypertarget{_node___c_8py}{}\doxysection{scripts/\+Node\+\_\+C.py File Reference}
+\label{_node___c_8py}\index{scripts/Node\_C.py@{scripts/Node\_C.py}}
+
+
+This file contains code that subscribes to the robot’s position and velocity (using the custom message) and prints the distance of the robot from the target and the robot’s average speed.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_node___c_8py_a9e3f64a90d31757df2fa42d3a46e8768}\label{_node___c_8py_a9e3f64a90d31757df2fa42d3a46e8768}} 
+def \mbox{\hyperlink{_node___c_8py_a9e3f64a90d31757df2fa42d3a46e8768}{Node\+\_\+\+C.\+Position\+\_\+and\+\_\+velocity}} (data)
+\begin{DoxyCompactList}\small\item\em This function is couting distance to target and average velocity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_node___c_8py_afa26e17aeaf611b25e8d6565ef0a96d7}\label{_node___c_8py_afa26e17aeaf611b25e8d6565ef0a96d7}} 
+int \mbox{\hyperlink{_node___c_8py_afa26e17aeaf611b25e8d6565ef0a96d7}{Node\+\_\+\+C.\+distance\+\_\+to\+\_\+target}} = 0
+\begin{DoxyCompactList}\small\item\em distance\+\_\+to\+\_\+target contains distance to goal calculated via mathematical equations \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_adbf020b1364fb227c4f9d056d5456f8e}\label{_node___c_8py_adbf020b1364fb227c4f9d056d5456f8e}} 
+int \mbox{\hyperlink{_node___c_8py_adbf020b1364fb227c4f9d056d5456f8e}{Node\+\_\+\+C.\+average\+\_\+velocity}} = 0
+\begin{DoxyCompactList}\small\item\em average\+\_\+velocity is average velocity during all movement of robot \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_ae4053ea615e54cf7bb0b815798970e8c}\label{_node___c_8py_ae4053ea615e54cf7bb0b815798970e8c}} 
+int \mbox{\hyperlink{_node___c_8py_ae4053ea615e54cf7bb0b815798970e8c}{Node\+\_\+\+C.\+i}} = 0
+\begin{DoxyCompactList}\small\item\em i is iterator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_ac6aaee4f60039f04825e249fc5ee0d89}\label{_node___c_8py_ac6aaee4f60039f04825e249fc5ee0d89}} 
+int \mbox{\hyperlink{_node___c_8py_ac6aaee4f60039f04825e249fc5ee0d89}{Node\+\_\+\+C.\+v}} = 0
+\begin{DoxyCompactList}\small\item\em v is current velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_ab9e9f61947cd7f1aa07fb386845cdf7e}\label{_node___c_8py_ab9e9f61947cd7f1aa07fb386845cdf7e}} 
+\mbox{\hyperlink{_node___c_8py_ab9e9f61947cd7f1aa07fb386845cdf7e}{Node\+\_\+\+C.\+x1}} = rospy.\+get\+\_\+param(\char`\"{}/des\+\_\+pos\+\_\+x\char`\"{})
+\begin{DoxyCompactList}\small\item\em x1 contains coordinate on x axis of desired position ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_a14ec3c1598e021860e265e5dfc81fd3e}\label{_node___c_8py_a14ec3c1598e021860e265e5dfc81fd3e}} 
+\mbox{\hyperlink{_node___c_8py_a14ec3c1598e021860e265e5dfc81fd3e}{Node\+\_\+\+C.\+y1}} = rospy.\+get\+\_\+param(\char`\"{}/des\+\_\+pos\+\_\+y\char`\"{})
+\begin{DoxyCompactList}\small\item\em y1 contains coordinate on y axis of desired position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_acbd832a6c59ce7481c0aa6c142c269ac}\label{_node___c_8py_acbd832a6c59ce7481c0aa6c142c269ac}} 
+\mbox{\hyperlink{_node___c_8py_acbd832a6c59ce7481c0aa6c142c269ac}{Node\+\_\+\+C.\+x2}} = data.\+x
+\begin{DoxyCompactList}\small\item\em x2 contains current coordinate on x axis \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_a7b1b611fe1103a7e87e45f28dea84e0c}\label{_node___c_8py_a7b1b611fe1103a7e87e45f28dea84e0c}} 
+\mbox{\hyperlink{_node___c_8py_a7b1b611fe1103a7e87e45f28dea84e0c}{Node\+\_\+\+C.\+y2}} = data.\+y
+\begin{DoxyCompactList}\small\item\em y2 contains current coordinate on y axis \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_a54412d06c4d0098063278379cdf50c63}\label{_node___c_8py_a54412d06c4d0098063278379cdf50c63}} 
+\mbox{\hyperlink{_node___c_8py_a54412d06c4d0098063278379cdf50c63}{Node\+\_\+\+C.\+vx}} = data.\+vx
+\begin{DoxyCompactList}\small\item\em vx is current velocity on x axis \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_a47046d51555aba62f2370b7639174379}\label{_node___c_8py_a47046d51555aba62f2370b7639174379}} 
+\mbox{\hyperlink{_node___c_8py_a47046d51555aba62f2370b7639174379}{Node\+\_\+\+C.\+vy}} = data.\+vy
+\begin{DoxyCompactList}\small\item\em vy is current velocity on y axis \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_af1c92522968ac0824b289e6e05c732cd}\label{_node___c_8py_af1c92522968ac0824b289e6e05c732cd}} 
+\mbox{\hyperlink{_node___c_8py_af1c92522968ac0824b289e6e05c732cd}{Node\+\_\+\+C.\+velocity}} = math.\+sqrt(((vx)$\ast$$\ast$2)+((vy)$\ast$$\ast$2))
+\begin{DoxyCompactList}\small\item\em velocity is current average velocity of robot \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___c_8py_a917b66f5d95e771e027a9849678792b6}\label{_node___c_8py_a917b66f5d95e771e027a9849678792b6}} 
+\mbox{\hyperlink{_node___c_8py_a917b66f5d95e771e027a9849678792b6}{Node\+\_\+\+C.\+rate}} = rospy.\+Rate(rospy.\+get\+\_\+param(\char`\"{}/frequency\char`\"{}))
+\begin{DoxyCompactList}\small\item\em rate is frequency of published information \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains code that subscribes to the robot’s position and velocity (using the custom message) and prints the distance of the robot from the target and the robot’s average speed. 
+
+\begin{DoxyAuthor}{Author}
+Tomasz Strzesak 
+\end{DoxyAuthor}
