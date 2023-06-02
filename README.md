@@ -126,4 +126,17 @@ generate HTML page by running doxywizard in CLI and choosing appropriate fields:
 
 ![Screenshot from 2023-06-02 13-29-23](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/bc804ff8-568c-4b13-9c61-b98ed596a629)
 
+<h2>Jupyter Notebook:</h2>
+ We can run Jupyter notebook as a main menu and navigate a robot. In CLI we need to run command:
+ 
+ ```
+ jupyter notebook --allow-root
+ ```
+ Then when we run notebook, we can select  desired position, check send goal and press confirm action button:
+ 
+ When we want to cancel movement, we uncheck send goal, check cancel and press confirm action button.
+ 
+ At the bottom we can see plots with displaying values of position and distance to closest obstacle:
+ 
+ 
 
