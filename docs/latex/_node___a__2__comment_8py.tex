@@ -1,0 +1,62 @@
+\hypertarget{_node___a__2__comment_8py}{}\doxysection{scripts/comments/\+Node\+\_\+\+A\+\_\+2\+\_\+comment.py File Reference}
+\label{_node___a__2__comment_8py}\index{scripts/comments/Node\_A\_2\_comment.py@{scripts/comments/Node\_A\_2\_comment.py}}
+
+
+This file contains code that publishes the robot position and velocity as a custom message (x,y, vx, vy), by relying on the values published on the topic /odom.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{_node___a__2__comment_8py_a008de38d79a745ec7045afffba553881}{Node\+\_\+\+A\+\_\+2\+\_\+comment.\+Publish}} (data)
+\begin{DoxyCompactList}\small\item\em This function publishes data about coordinates and velocities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_node___a__2__comment_8py_a016dc26efd8734370c509f0109ad9e55}\label{_node___a__2__comment_8py_a016dc26efd8734370c509f0109ad9e55}} 
+\mbox{\hyperlink{_node___a__2__comment_8py_a016dc26efd8734370c509f0109ad9e55}{Node\+\_\+\+A\+\_\+2\+\_\+comment.\+publisher}} = rospy.\+Publisher(\textquotesingle{}Position\+\_\+and\+\_\+velocity\textquotesingle{}, custom\+\_\+message\+\_\+position\+\_\+and\+\_\+velocity, queue\+\_\+size = 10)
+\begin{DoxyCompactList}\small\item\em publisher publishes received data \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___a__2__comment_8py_a008042283eb2a4528505046c28f9164e}\label{_node___a__2__comment_8py_a008042283eb2a4528505046c28f9164e}} 
+\mbox{\hyperlink{_node___a__2__comment_8py_a008042283eb2a4528505046c28f9164e}{Node\+\_\+\+A\+\_\+2\+\_\+comment.\+message}} = custom\+\_\+message\+\_\+position\+\_\+and\+\_\+velocity()
+\begin{DoxyCompactList}\small\item\em message takes coordinates and velocities from parameter data \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___a__2__comment_8py_a66930f90398360899cea5ee450121238}\label{_node___a__2__comment_8py_a66930f90398360899cea5ee450121238}} 
+{\bfseries Node\+\_\+\+A\+\_\+2\+\_\+comment.\+x}
+\item 
+\mbox{\Hypertarget{_node___a__2__comment_8py_a243110e96a6520265fa9416ebc8bf9f2}\label{_node___a__2__comment_8py_a243110e96a6520265fa9416ebc8bf9f2}} 
+{\bfseries Node\+\_\+\+A\+\_\+2\+\_\+comment.\+y}
+\item 
+\mbox{\Hypertarget{_node___a__2__comment_8py_acfcc645cacf6d17c1d705a7d8bef9747}\label{_node___a__2__comment_8py_acfcc645cacf6d17c1d705a7d8bef9747}} 
+{\bfseries Node\+\_\+\+A\+\_\+2\+\_\+comment.\+vx}
+\item 
+\mbox{\Hypertarget{_node___a__2__comment_8py_a3456c3afef80922d3338b162e40d800c}\label{_node___a__2__comment_8py_a3456c3afef80922d3338b162e40d800c}} 
+{\bfseries Node\+\_\+\+A\+\_\+2\+\_\+comment.\+vy}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains code that publishes the robot position and velocity as a custom message (x,y, vx, vy), by relying on the values published on the topic /odom. 
+
+\begin{DoxyAuthor}{Author}
+Tomasz Strzesak 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_node___a__2__comment_8py_a008de38d79a745ec7045afffba553881}\label{_node___a__2__comment_8py_a008de38d79a745ec7045afffba553881}} 
+\index{Node\_A\_2\_comment.py@{Node\_A\_2\_comment.py}!Publish@{Publish}}
+\index{Publish@{Publish}!Node\_A\_2\_comment.py@{Node\_A\_2\_comment.py}}
+\doxysubsubsection{\texorpdfstring{Publish()}{Publish()}}
+{\footnotesize\ttfamily def Node\+\_\+\+A\+\_\+2\+\_\+comment.\+Publish (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+This function publishes data about coordinates and velocities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & contains all information about coordinates and velocities \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function is type void 
+\end{DoxyReturn}

@@ -1,0 +1,111 @@
+\doxysubsection*{About program\+:}
+
+Robot is in environment with some obstacles. By sending desired position, robot moves to it. If he finds obstacle, he navigates along it to avoid it and then reaches the target position. To do this task, four nodes were developed\+:
+
+
+\begin{DoxyItemize}
+\item Node\+\_\+\+A\+\_\+1 implements an action client, allowing the user to set a target (x, y) or to cancel it. In interface we can set the desired position of robot, cancel movement or exit process. We navigate via pressing numbers (for example by pressing button \textquotesingle{}1\textquotesingle{} we navigate to section where we need to insert desired position on x and y axis). After inserting, we can confirm our choice or go back to main menu.
+\item Node\+\_\+\+A\+\_\+2 publishes the robot position and velocity as a custom message (x,y, vx, vy), by relying on the values published on the topic /odom.
+\item Node\+\_\+B is a service node that, when called, prints the number of goals reached and cancelled
+\item Node\+\_\+C subscribes to the robot’s position and velocity (using the custom message) and prints the distance of the robot from the target and the robot’s average speed.
+\end{DoxyItemize}
+
+\doxysubsection*{How to run it\+:}
+
+We need to clone 2 repositories to our workspace, where we have R\+OS installed, in src directory\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/CarmineD8/assignment\_2\_2022.git}
+\DoxyCodeLine{git clone https://github.com/Tommaso1699/Research\_Track\_Assignment\_2.git}
+\end{DoxyCode}
+
+
+Then we need to download konsole terminal emulator\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-\/get update}
+\DoxyCodeLine{sudo apt-\/get install konsole}
+\end{DoxyCode}
+
+
+We need to open terminal and run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roscore\&}
+\end{DoxyCode}
+
+
+In our workspace with R\+OS, we need to run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{catkin\_make}
+\DoxyCodeLine{source [ws\_path]/devel/setup.bash}
+\end{DoxyCode}
+
+
+If necessary, we need to make python files in scripts folder executable. To do that, we move to directory scripts in directory Research\+\_\+\+Track\+\_\+\+Assignment\+\_\+2 and we run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{chmod 777 ./*}
+\end{DoxyCode}
+
+
+Then in src file we can launch project\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch assignment2\_research\_track\_1 assignment2.launch}
+\end{DoxyCode}
+
+
+\doxysubsection*{Pseudocode of Node\+\_\+\+A\+\_\+1\+:}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Initialize Node A\_1}
+\DoxyCodeLine{Initialize client}
+\DoxyCodeLine{Open main menu}
+\DoxyCodeLine{Choose number from 1 to 2}
+\DoxyCodeLine{If choice is equal to 1:}
+\DoxyCodeLine{  Enter position of x coordinate}
+\DoxyCodeLine{  Enter position of y coordinate}
+\DoxyCodeLine{  Choose if you want to go further or go back to main menu}
+\DoxyCodeLine{  If ch is equal to 'y':}
+\DoxyCodeLine{    Print x and y}
+\DoxyCodeLine{    Wait for server socket}
+\DoxyCodeLine{    Initialize goal}
+\DoxyCodeLine{    Assign c argument to attribute x}
+\DoxyCodeLine{    Assign d argument to attribute y}
+\DoxyCodeLine{    Send goal to robot}
+\DoxyCodeLine{    Get back to UI}
+\DoxyCodeLine{  If ch is equal to 'b':}
+\DoxyCodeLine{    Go back to main menu}
+\DoxyCodeLine{If choice is equal to 2:}
+\DoxyCodeLine{  Choose if you want to go further or go back to main menu}
+\DoxyCodeLine{  If ch is equal to 'y':}
+\DoxyCodeLine{    Cancel movement of robot}
+\DoxyCodeLine{    Go back to main menu}
+\DoxyCodeLine{  If ch is equal to 'b':}
+\DoxyCodeLine{    Go back to main menu }
+\end{DoxyCode}
+
+
+\doxysubsection*{Pseudocode of Node\+\_\+\+A\+\_\+2\+:}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Initialize Node A\_2}
+\DoxyCodeLine{Initialize publisher}
+\DoxyCodeLine{Initialize message}
+\DoxyCodeLine{Assign value from attribute data.pose.pose.position.x to attribute message.x}
+\DoxyCodeLine{Print message.x}
+\DoxyCodeLine{Assign value from attribute data.pose.pose.position.y to attribute message.y}
+\DoxyCodeLine{Print message.y}
+\DoxyCodeLine{Assign value from attribute data.twist.twist.linear.x to attribute message.vx}
+\DoxyCodeLine{Print message.vx}
+\DoxyCodeLine{Assign value from attribute data.twist.twist.linear.y to attribute message.vy}
+\DoxyCodeLine{Print message.vy}
+\DoxyCodeLine{Publish message}
+\end{DoxyCode}
+
+
+\doxysubsection*{Possible improvements\+:}
+
+
+\begin{DoxyItemize}
+\item Better algorithm to compute distance from target and average velocity in Node\+\_\+C
+\item Computing current position coordinates with more accuracy 
+\end{DoxyItemize}

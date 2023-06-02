@@ -1,0 +1,70 @@
+\hypertarget{_node___b__comment_8py}{}\doxysection{scripts/comments/\+Node\+\_\+\+B\+\_\+comment.py File Reference}
+\label{_node___b__comment_8py}\index{scripts/comments/Node\_B\_comment.py@{scripts/comments/Node\_B\_comment.py}}
+
+
+This file contains a service node that, when called, prints the number of goals reached and cancelled.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{_node___b__comment_8py_ac0807bbf0a914a45d34b008f23007d40}{Node\+\_\+\+B\+\_\+comment.\+Goals}} (arg)
+\begin{DoxyCompactList}\small\item\em This function is printing reached and canceled goals. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{_node___b__comment_8py_a489e382d6236dd989bf6dff2a738eb13}{Node\+\_\+\+B\+\_\+comment.\+Counter}} (data)
+\begin{DoxyCompactList}\small\item\em This function is counting reached and canceled goals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_node___b__comment_8py_ab56ad1c904c87c416d54bea63e7e60e5}\label{_node___b__comment_8py_ab56ad1c904c87c416d54bea63e7e60e5}} 
+int \mbox{\hyperlink{_node___b__comment_8py_ab56ad1c904c87c416d54bea63e7e60e5}{Node\+\_\+\+B\+\_\+comment.\+reached\+\_\+goal}} = 0
+\begin{DoxyCompactList}\small\item\em reached\+\_\+goals contains a number of reached goals, which is incremented if goal is reached \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_node___b__comment_8py_a82af6bbca894cc323f5b4b0e005a6207}\label{_node___b__comment_8py_a82af6bbca894cc323f5b4b0e005a6207}} 
+int \mbox{\hyperlink{_node___b__comment_8py_a82af6bbca894cc323f5b4b0e005a6207}{Node\+\_\+\+B\+\_\+comment.\+canceled\+\_\+goal}} = 0
+\begin{DoxyCompactList}\small\item\em canceled\+\_\+goals contains a number of canceled goals, which is incremented if goal is canceled \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a service node that, when called, prints the number of goals reached and cancelled. 
+
+\begin{DoxyAuthor}{Author}
+Tomasz Strzesak 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_node___b__comment_8py_a489e382d6236dd989bf6dff2a738eb13}\label{_node___b__comment_8py_a489e382d6236dd989bf6dff2a738eb13}} 
+\index{Node\_B\_comment.py@{Node\_B\_comment.py}!Counter@{Counter}}
+\index{Counter@{Counter}!Node\_B\_comment.py@{Node\_B\_comment.py}}
+\doxysubsubsection{\texorpdfstring{Counter()}{Counter()}}
+{\footnotesize\ttfamily def Node\+\_\+\+B\+\_\+comment.\+Counter (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+This function is counting reached and canceled goals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & contains status of goal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function is type void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_node___b__comment_8py_ac0807bbf0a914a45d34b008f23007d40}\label{_node___b__comment_8py_ac0807bbf0a914a45d34b008f23007d40}} 
+\index{Node\_B\_comment.py@{Node\_B\_comment.py}!Goals@{Goals}}
+\index{Goals@{Goals}!Node\_B\_comment.py@{Node\_B\_comment.py}}
+\doxysubsubsection{\texorpdfstring{Goals()}{Goals()}}
+{\footnotesize\ttfamily def Node\+\_\+\+B\+\_\+comment.\+Goals (\begin{DoxyParamCaption}\item[{}]{arg }\end{DoxyParamCaption})}
+
+
+
+This function is printing reached and canceled goals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & is a parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function returns Empty\+Response() 
+\end{DoxyReturn}
