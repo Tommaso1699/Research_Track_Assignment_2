@@ -2,7 +2,7 @@
 #importing libraries
 import rospy
 from nav_msgs.msg import Odometry
-from assignment_2_2022.msg import custom_message_position_and_velocity
+from assignment2_research_track_1.msg import custom_message_position_and_velocity
 import time
 
 def Publish(data): #publishing data about coordinates and velocities
