@@ -102,3 +102,28 @@ Publish message
  - Better algorithm to compute distance from target and average velocity in Node_C
  
  - Computing current position coordinates with more accuracy 
+
+<h2>Documentation:</h2>
+
+ Documentation of all nodes was added using Doxygen. Due to problems with running code
+after adding comments suitable for Doxygen, I created new folder in scripts folder named
+comments, where I put all python scripts with nodes and comments in doxygen format. We can
+generate HTML page by running doxywizard in CLI and choosing appropriate fields:
+
+![Screenshot from 2023-06-02 13-30-11](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/55e1c763-9b18-4b7f-8d0c-2640be460466)
+
+ We can navigate on a page using panel on the left. We can see README and comments folder with commented node scripts:
+ 
+ ![Screenshot from 2023-06-02 13-28-23](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/7c8caa31-a629-45c7-ab76-7e62126cba74)
+ 
+![Screenshot from 2023-06-02 13-28-47](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/f7f20374-0202-4e0f-87d9-1f5126b9484b)
+
+![Screenshot from 2023-06-02 13-29-01](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/f366d157-a4ae-4b50-8366-67054e7f9d33)
+
+![Screenshot from 2023-06-02 13-29-09](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/31dec341-8a00-4057-a137-94b0b0418654)
+
+![Screenshot from 2023-06-02 13-29-15](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/b30aa7a7-8d0c-4b8e-a9f1-a18855959025)
+
+![Screenshot from 2023-06-02 13-29-23](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/bc804ff8-568c-4b13-9c61-b98ed596a629)
+
+
