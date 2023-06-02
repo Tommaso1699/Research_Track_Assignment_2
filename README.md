@@ -134,9 +134,20 @@ generate HTML page by running doxywizard in CLI and choosing appropriate fields:
  ```
  Then when we run notebook, we can select  desired position, check send goal and press confirm action button:
  
+ ![Screenshot from 2023-06-03 01-31-14](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/891f658e-6dc2-46bb-a605-6baf5de4b4e3)
+
  When we want to cancel movement, we uncheck send goal, check cancel and press confirm action button.
  
  At the bottom we can see plots with displaying values of position and distance to closest obstacle:
+ 
+ ![Screenshot from 2023-06-03 01-33-17](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/3ca9751b-7d0c-429a-a10f-d477f1d61edb)
+ 
+ ![Screenshot from 2023-06-03 01-33-35](https://github.com/Tommaso1699/Research_Track_Assignment_2/assets/69764736/bbb19486-e552-4a07-a6a4-2c207fe8f545)
+
+ 
+
+ 
+ 
  
  
 
